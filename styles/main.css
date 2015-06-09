@@ -88,3 +88,7 @@
      color: rgb(233,50,117);
      background-color: white;
  }
+
+ .container.narrow {
+     max-width: 56rem;
+ }
