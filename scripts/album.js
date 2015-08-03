@@ -83,12 +83,22 @@ var findParentByClassName = function(element, targetClass) {
     
     var currentParent = element.parentElement;
     
-    while (currentParent.className != targetClass) {
-        currentParent = currentParent.parentElement
-    }
+    if(currentParent == undefined){
+        alert("No Parent Found");
+    };
     
-    return currentParent;
+    
+    
+    while (currentParent.className != targetClass) {
+        currentParent = currentParent.parentElement;
+        
+        if(currentParent == undefined){
+            alert("No Parent Found With That Class Name");
 
+        };
+    }
+
+    return currentParent;
 };
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
 var currentlyPlayingSong = null;
